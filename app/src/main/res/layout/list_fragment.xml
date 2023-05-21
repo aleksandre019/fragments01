@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ListFragment"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button212"
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_1"
+        android:text="@string/back"
+        android:textColor="@color/white" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button213"
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_1"
+        android:text="@string/go_to_profile"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

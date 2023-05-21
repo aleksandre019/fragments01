@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">fragments</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello">hello</string>
+    <string name="textview">TextView</string>
+    <string name="enter">enter</string>
+    <string name="name">Name</string>
+    <string name="surname">Name</string>
+    <string name="Surname">surname</string>
+    <string name="Name">Name</string>
+    <string name="gpa">GPA</string>
+    <string name="Enter">enter</string>
+    <string name="enter1">Enter</string>
+    <string name="back">Back</string>
+    <string name="go_to_profile">Go to profile</string>
+    <string name="information">information</string>
+    <string name="informationgpa">informationgpa</string>
+    <string name="informationsurname">informationsurname</string>
+    <string name="Information">information</string>
+</resources>
