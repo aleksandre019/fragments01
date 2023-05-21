@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/Homefragment"
-        android:name="com.example.fragments.fragments.ListFragment"
-        android:label="list_fragment"
-        tools:layout="@layout/list_fragment">
+        android:name="com.example.fragments.fragments.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/home_fragment">
         <argument
             android:name="amount"
             android:defaultValue="-1"
@@ -35,8 +35,8 @@
 
     <fragment
         android:id="@+id/ProfileFragment"
-        android:name="com.example.fragments.fragments.ListFragment"
-        android:label="list_fragment"
+        android:name="com.example.fragments.fragments.ProfileFragment"
+        android:label="ProfileFragment"
         tools:layout="@layout/profile_fragment" >
         <argument
             android:name="amount"

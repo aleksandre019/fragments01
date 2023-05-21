@@ -27,9 +27,9 @@ class ListFragment : Fragment() {
         _binding = ListFragmentBinding.inflate(inflater, container, false)
         return binding.root
         val view = inflater.inflate(R.layout.profile_fragment, container, false)
-        val backButton = view.findViewById<Button>(R.id.button212)
+        val backButton = view.findViewById<Button>(R.id.button22)
         backButton.setOnClickListener {
-            homefragment.popBackStack()
+            Homefragment.popBackStack()
         }
         return view
 
@@ -49,10 +49,6 @@ class ListFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-}
-
-private fun homefragment.Companion.popBackStack() {
-    TODO("Not yet implemented")
 }
 
 private fun setOnClickListener(): Unit = TODO(reason = "Not yet implemented")

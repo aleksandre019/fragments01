@@ -4,12 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.fragments.R
 import com.example.fragments.databinding.HomeFragmentBinding
 
-@Suppress("UNUSED_EXPRESSION")
 class HomeFragment : Fragment() {
 
     private var _binding: HomeFragmentBinding? = null
@@ -19,68 +19,46 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = HomeFragmentBinding.inflate(/* inflater = */ inflater, /* parent = */
-            container, /* attachToParent = */
-            false)
+        _binding = HomeFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val onClickListener = binding.Button.setOnClickListener {
+            val digit = binding.editTextTextPersonName.text.toString()
 
+            if (digit.isEmpty()) return@setOnClickListener
 
-
-        Navigation.findNavController(view)
-
-        binding.apply {
-            button.setOnClickListener {
-                val digit = editTextTextPersonName.text.toString()
-
-                if (digit.isEmpty()) return@setOnClickListener
-
-                digit.toInt()
-                actionHomeFragmentToListFragment2()
-                navigate()
-            }
+            val action = HomeFragmentDirections.actionHomeFragmentToListFragment()
+            Navigation.run { findNavController(view).navigate(action) }
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-
-
-
-
     }
 }
 
-private fun navigate() {
-    TODO("Not yet implemented")
-}
+class Homefragment : Fragment() {
+    private lateinit var editText: EditText
 
-private fun actionHomeFragmentToListFragment2(): Any {
-    TODO("Not yet implemented")
-
-}
-
-class homefragment : Fragment() {
-    private lateinit var editText:
-
-    override override fun onCreateView(
+    override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.home_fragment, container, false)
-        editText = view.findViewById(/* id = */ R.id.imageView)
+        editText = view.findViewById(R.id.imageView)
         return view
     }
 
-    fun deleteInformation() {
-        editText.text.clear()
+    companion object {
+        fun popBackStack() {
+            TODO("Not yet implemented")
+        }
     }
 
-    companion object
 }

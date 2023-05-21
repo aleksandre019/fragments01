@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import com.example.fragments.R
 import com.example.fragments.databinding.ProfileFragmentBinding
 
@@ -26,9 +26,9 @@ class ProfileFragment : Fragment() {
         _binding = ProfileFragmentBinding.inflate(inflater, container, false)
         return binding.root
         val view = inflater.inflate(R.layout.profile_fragment, container, false)
-        val infoTextView = view.findViewById(R.id.textView1)
-        val infoTextViewETCF2m= view.findViewById(R.id.textView3)
-        val infoTextViewETC1 = view.findViewById(R.id.textView2)
+        val infoTextView = view.findViewById<TextView>(R.id.textView1)
+        val infoTextViewETCF2m = view.findViewById<TextView>(R.id.textView3)
+        val infoTextViewETC1 = view.findViewById<TextView>(R.id.textView2)
         val information = arguments?.getString("information")
         information.also { infoTextView.text = it }
 
